@@ -23,6 +23,19 @@ public class Employees {
     @Column(name = "hire_date")
     private String hireDate;
     @ManyToOne
-    private String firstName;
+    @JoinColumn(name = "job_id")
+    private Job job;
+    @Column(name = "salary")
+    private float salary;
+    @Column(name = "commission_pct")
+    private float commissionPct;
+    @ManyToOne
+    @JoinColumn(name = "manager_id")
+    private Employees manager;
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    private Department department;
+    @Column(name = "enabled")
+    private boolean enable;
 
 }
