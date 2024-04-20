@@ -25,5 +25,5 @@ public class Location {
 
     @ManyToOne
     @JoinColumn(name = "country_id")
-    private Country country;
+    private Countries country;
 }
