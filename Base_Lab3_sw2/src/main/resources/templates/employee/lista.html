@@ -11,8 +11,9 @@
 <body>
     <div class="container">
         <h1>Lista de Empleados</h1>
-        <a class="btn btn-primary mt-4 mb-4" th:href="@{}"></a>                 <!-- COMPLETAR -->
-        <form class="input-group mb-lg-3" method="post" th:action="@{}">                <!-- COMPLETAR -->
+        <a class="btn btn-primary mt-4 mb-4" th:href="@{/agregar}">AgregarEmpleado</a>                 <!-- COMPLETAR -->
+        <form class="input-group mb-lg-3" method="post" th:action="@{/buscar}">                <!-- COMPLETAR -->
+            <input type="text" class="form-control" placeholder="Buscar..." name="query">
             <!-- COMPLETAR -->
             <div class="input-group-append">
                 <!-- COMPLETAR -->
