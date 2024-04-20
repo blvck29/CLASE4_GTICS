@@ -3,6 +3,7 @@ package com.example.laboratorio3.controller;
 import com.example.laboratorio3.entity.Employees;
 import com.example.laboratorio3.repository.EmployeesRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
@@ -17,10 +18,11 @@ public class EmployeeController {
     }
 
     @GetMapping(value = "/lista_empleados")
-    public String listaEmployee(   ){
+    public String listaEmployee( Model model ){
 
-        List<Employees>
+        List<Employees> listaEmpleados = employeesRepository.findAll();
 
+        model.addAttribute("listaEmpleados", listaEmpleados);
         return "/employee/lista";
     }
 
