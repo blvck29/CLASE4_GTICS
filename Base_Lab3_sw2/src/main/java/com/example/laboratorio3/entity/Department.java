@@ -18,7 +18,7 @@ public class Department {
     private Employees manager;
 
     @ManyToOne
-    @JoinColumn(name = "manager_id")
-    private Employees manager;
+    @JoinColumn(name = "location_id")
+    private Location location;
 
 }
