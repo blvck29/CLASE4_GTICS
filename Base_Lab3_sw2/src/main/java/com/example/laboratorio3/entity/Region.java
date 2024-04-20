@@ -1,9 +1,11 @@
 package com.example.laboratorio3.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "regions")
 public class Region {
 
