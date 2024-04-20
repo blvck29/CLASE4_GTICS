@@ -1,35 +1,37 @@
 package com.example.laboratorio3.controller;
 
-//COMPLETAR
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
 public class EmployeeController {
 
-    //COMPLETAR
-
+    @GetMapping(value = "/lista_empleados")
     public String listaEmployee(   ){
-        //COMPLETAR
+        return "/employee/lista";
     }
 
+    @GetMapping(value = "/nuevo_empleado")
     public String nuevoEmployeeForm( ) {
-        //COMPLETAR
+        return "/employee/newFrm";
     }
 
-
+    @GetMapping(value = "/save_empleado")
     public String guardarEmployee() {
-        //COMPLETAR
+        return "/employee/lista";
     }
 
 
+    @GetMapping(value = "/edit_employee")
     public String editarEmployee() {
-        //COMPLETAR
+        return "/employee/editFrm";
     }
 
 
+    @GetMapping(value = "/delete_employee")
     public String borrarEmpleado() {
-
-       //COMPLETAR
-
+        return "/employee/lista";
     }
 
-    //COMPLETAR
 
 }
