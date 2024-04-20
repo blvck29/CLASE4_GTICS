@@ -44,13 +44,13 @@ public class EmployeeController {
 
 
     @GetMapping(value = "/edit_employee")
-    public String editarEmployee() {
+    public String editarEmployee(Model model) {
         return "/employee/editFrm";
     }
 
 
     @GetMapping(value = "/delete_employee")
-    public String borrarEmpleado() {
+    public String borrarEmpleado(Model model) {
         return "/employee/lista";
     }
 
