@@ -13,3 +13,6 @@ David Alonso Escobedo Cerrón: 20210850
 Piero Enrique Huancas Coripuna: 20200814
 
 Alexander Daniel Abrisqueta Zevallos 20191641
+
+
+Jorge Coronado Villacorta: 20181526
