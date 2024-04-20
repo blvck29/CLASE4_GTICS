@@ -12,9 +12,13 @@ import java.util.List;
 public class EmployeeController {
 
     final EmployeesRepository employeesRepository;
+    final JobRepository jobRepository;
+    final DepartmetRepository departmetRepository;
 
-    public EmployeeController(EmployeesRepository employeesRepository) {
+    public EmployeeController(EmployeesRepository employeesRepository, JobRepository jobRepository, DepartmetRepository departmetRepository) {
         this.employeesRepository = employeesRepository;
+        this.jobRepository = jobRepository;
+        this.departmetRepository = departmetRepository;
     }
 
     @GetMapping(value = "/lista_empleados")
@@ -27,12 +31,14 @@ public class EmployeeController {
     }
 
     @GetMapping(value = "/nuevo_empleado")
-    public String nuevoEmployeeForm( ) {
+    public String nuevoEmployeeForm( Model model) {
+        model.addAtribute("listaJobs",jobRepository.findAll());
+        model.addAtribute("listaJobs",jobRepository.findAll());
         return "/employee/newFrm";
     }
 
     @GetMapping(value = "/save_empleado")
-    public String guardarEmployee() {
+    public String guardarEmployee(Model model) {
         return "/employee/lista";
     }
 
