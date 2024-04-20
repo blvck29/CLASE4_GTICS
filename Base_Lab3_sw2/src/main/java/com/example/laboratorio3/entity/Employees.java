@@ -1,10 +1,13 @@
 package com.example.laboratorio3.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
-
+@Getter
+@Setter
 @Entity
 @Table(name = "employees")
 public class Employees {
